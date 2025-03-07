@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleDuolingo", "simpleDuolingo\simpleDuolingo.csproj", "{ED12F799-8185-4A93-B6BD-1E623BBBF44A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED12F799-8185-4A93-B6BD-1E623BBBF44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED12F799-8185-4A93-B6BD-1E623BBBF44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED12F799-8185-4A93-B6BD-1E623BBBF44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED12F799-8185-4A93-B6BD-1E623BBBF44A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

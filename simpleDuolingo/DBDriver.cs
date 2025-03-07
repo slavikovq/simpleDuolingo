@@ -1,41 +1,26 @@
 using MySqlConnector;
 
-namespace simpleDuolingo;
+namespace SimpleDuolingoWinForm;
 
 public class DBDriver
 {
     public string ServerDomain = "vydb1.spsmb.cz";
     public string Username = "barbora.slavikova";
-    public string Password = "heslo123";
+    public string Password = "";
     public string Database = "student_barbora.slavikova_simpleDuolingo";
+    
+    public string connectionString =>
+        $"Server={ServerDomain};Database={Database};User={Username};Password={Password};";
 
-    public DBDriver()
+    public Exception? ThrownException;
+
+    public DBDriver(string password)
     {
-    }
-
-    string connectionString =>
-        $"Server={ServerDomain};Database={Database};User={Username};Password={Password};SslMode=None;";
-
-    public DBDriver(string serverDomain, string username, string password, string database)
-    {
-        this.ServerDomain = serverDomain;
-        this.Username = username;
-        this.Password = password;
-        this.Database = database;
+        Password = password;
     }
 
     public MySqlConnection GetConnection()
     {
-        try
-        {
-            var connection = new MySqlConnection(connectionString);
-            connection.Open();
-            return connection;
-        }
-        catch (MySqlException ex)
-        {
-            Console.WriteLine($"Error: {ex.Message}");
-            return null;
-        }
+        return new MySqlConnection(connectionString);
     }
 }

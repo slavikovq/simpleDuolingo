@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="640ef95d-6dcf-4278-95f3-199df98794e8" name="Changes" comment="" />
+    <list default="true" id="640ef95d-6dcf-4278-95f3-199df98794e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfoInputs.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +22,26 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;slavikovq&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/slavikovq/simpleDuolingo.git&quot;,
+    &quot;accountId&quot;: &quot;74b7fffd-863f-4cf3-8e8c-eeff71a57e99&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2tx9xtPJucIHDCzIMmcbMbXOI4o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,6 +50,8 @@
   &quot;keyToString&quot;: {
     &quot;.NET Project.simpleDuolingo.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -69,6 +93,9 @@
       <workItem from="1741370049203" duration="1764000" />
       <workItem from="1741371825694" duration="6469000" />
       <workItem from="1741381098952" duration="1820000" />
+      <workItem from="1741383099440" duration="44000" />
+      <workItem from="1741384236549" duration="28000" />
+      <workItem from="1741384282580" duration="254000" />
     </task>
     <servers />
   </component>

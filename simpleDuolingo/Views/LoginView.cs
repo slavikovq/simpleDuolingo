@@ -1,4 +1,5 @@
 using MySqlConnector;
+using SimpleDuolingoWinForm;
 
 namespace simpleDuolingo.Views;
 
@@ -30,40 +31,18 @@ public partial class LoginView : UserControl
             SelectNextControl(PasswordLogin, true, true, false, true);
         }
     }
-
-    private void Login()
-    {
-        string password = PasswordLogin.Text;
-
-        if (string.IsNullOrEmpty(password))
-        {
-            errorText.Text = "Please enter your password";
-            return;
-        }
-
-        try
-        {
-            errorText.Text = "";
-            _dbDriver = new DBDriver(password);
-          
-        }
-        catch (MySqlException e)
-        {
-           errorText.Text = $"Error: {e.Message}";
-        }   
-
-    }
+    
 
     private void LogInButton_Click(object sender, EventArgs e)
     {
-        Login();
+        
     }
 
     private void PasswordLogin_KeyPress(object sender, KeyPressEventArgs e)
     {
         if (e.KeyChar == (char)Keys.Enter)
         {
-            Login();
+            
         }
     }
 }

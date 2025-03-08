@@ -1,11 +1,15 @@
+using SimpleDuolingoWinForm;
+
 namespace simpleDuolingo.Views;
 
 public partial class LanguageView : UserControl
 {
     private readonly Form _parentForm;
-    public LanguageView(Form parentForm)
+    private readonly DBDriver _DbDriver;
+    public LanguageView(Form parentForm, DBDriver dbDriver)
     {
         _parentForm = parentForm;
+        _DbDriver = dbDriver;
         InitializeComponent();
     }
 

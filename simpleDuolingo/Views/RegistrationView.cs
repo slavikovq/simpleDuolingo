@@ -1,11 +1,15 @@
+using SimpleDuolingoWinForm;
+
 namespace simpleDuolingo.Views;
 
 public partial class RegistrationView : UserControl
 {
     private readonly Form _parentForm;
-    public RegistrationView(Form parentForm)
+    private readonly DBDriver _DbDriver;
+    public RegistrationView(Form parentForm, DBDriver dbDriver)
     {
         _parentForm = parentForm;
+        _DbDriver = dbDriver;
         InitializeComponent();
     }
 

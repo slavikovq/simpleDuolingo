@@ -38,7 +38,7 @@ partial class UserView
         columnHeader4 = new System.Windows.Forms.ColumnHeader();
         label1 = new System.Windows.Forms.Label();
         button2 = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
+        nameInput = new System.Windows.Forms.TextBox();
         textBox2 = new System.Windows.Forms.TextBox();
         button1 = new System.Windows.Forms.Button();
         label2 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ partial class UserView
         // 
         listView1.BackColor = System.Drawing.Color.MistyRose;
         listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-        listView1.Font = new System.Drawing.Font("Monocraft", 9F);
+        listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
         listView1.Location = new System.Drawing.Point(304, 24);
         listView1.Name = "listView1";
         listView1.Size = new System.Drawing.Size(472, 400);
@@ -84,7 +84,7 @@ partial class UserView
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Monocraft", 10F);
+        label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         label1.ForeColor = System.Drawing.Color.Black;
         label1.Location = new System.Drawing.Point(59, 133);
         label1.Name = "label1";
@@ -95,38 +95,40 @@ partial class UserView
         // button2
         // 
         button2.BackColor = System.Drawing.Color.MistyRose;
-        button2.Font = new System.Drawing.Font("Monocraft", 10F);
+        button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button2.Location = new System.Drawing.Point(148, 158);
         button2.Name = "button2";
         button2.Size = new System.Drawing.Size(150, 28);
         button2.TabIndex = 7;
         button2.Text = "Create";
         button2.UseVisualStyleBackColor = false;
+        button2.Click += button2_Click;
         // 
-        // textBox1
+        // nameInput
         // 
-        textBox1.BackColor = System.Drawing.Color.MistyRose;
-        textBox1.Font = new System.Drawing.Font("Monocraft", 10F);
-        textBox1.Location = new System.Drawing.Point(148, 130);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(150, 22);
-        textBox1.TabIndex = 8;
+        nameInput.BackColor = System.Drawing.Color.MistyRose;
+        nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        nameInput.Location = new System.Drawing.Point(148, 130);
+        nameInput.Name = "nameInput";
+        nameInput.Size = new System.Drawing.Size(150, 23);
+        nameInput.TabIndex = 8;
+        nameInput.KeyPress += nameInput_KeyPress;
         // 
         // textBox2
         // 
         textBox2.BackColor = System.Drawing.Color.MistyRose;
-        textBox2.Font = new System.Drawing.Font("Monocraft", 10F);
+        textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         textBox2.Location = new System.Drawing.Point(148, 234);
         textBox2.Name = "textBox2";
         textBox2.PlaceholderText = "Id";
-        textBox2.Size = new System.Drawing.Size(150, 22);
+        textBox2.Size = new System.Drawing.Size(150, 23);
         textBox2.TabIndex = 9;
         textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
         // 
         // button1
         // 
         button1.BackColor = System.Drawing.Color.MistyRose;
-        button1.Font = new System.Drawing.Font("Monocraft", 10F);
+        button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button1.Location = new System.Drawing.Point(148, 262);
         button1.Name = "button1";
         button1.Size = new System.Drawing.Size(150, 28);
@@ -136,7 +138,7 @@ partial class UserView
         // 
         // label2
         // 
-        label2.Font = new System.Drawing.Font("Monocraft", 10F);
+        label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         label2.ForeColor = System.Drawing.Color.Black;
         label2.Location = new System.Drawing.Point(77, 233);
         label2.Name = "label2";
@@ -147,7 +149,7 @@ partial class UserView
         // button3
         // 
         button3.BackColor = System.Drawing.Color.MistyRose;
-        button3.Font = new System.Drawing.Font("Monocraft", 10F);
+        button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button3.Location = new System.Drawing.Point(12, 15);
         button3.Name = "button3";
         button3.Size = new System.Drawing.Size(130, 28);
@@ -158,9 +160,9 @@ partial class UserView
         // 
         // errorText
         // 
-        errorText.Font = new System.Drawing.Font("Monocraft", 8F);
+        errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
-        errorText.Location = new System.Drawing.Point(137, 401);
+        errorText.Location = new System.Drawing.Point(148, 198);
         errorText.Name = "errorText";
         errorText.Size = new System.Drawing.Size(150, 23);
         errorText.TabIndex = 13;
@@ -175,7 +177,7 @@ partial class UserView
         Controls.Add(label2);
         Controls.Add(button1);
         Controls.Add(textBox2);
-        Controls.Add(textBox1);
+        Controls.Add(nameInput);
         Controls.Add(button2);
         Controls.Add(label1);
         Controls.Add(listView1);
@@ -196,7 +198,7 @@ partial class UserView
     private System.Windows.Forms.TextBox textBox2;
     private System.Windows.Forms.Label label2;
 
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox nameInput;
 
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Button button2;

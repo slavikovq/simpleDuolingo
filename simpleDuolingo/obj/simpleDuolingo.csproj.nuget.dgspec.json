@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bara\\RiderProjects\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj": {}
+    "C:\\Users\\barbo\\OneDrive\\Plocha\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bara\\RiderProjects\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj": {
+    "C:\\Users\\barbo\\OneDrive\\Plocha\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bara\\RiderProjects\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj",
+        "projectUniqueName": "C:\\Users\\barbo\\OneDrive\\Plocha\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj",
         "projectName": "simpleDuolingo",
-        "projectPath": "C:\\Users\\bara\\RiderProjects\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj",
-        "packagesPath": "C:\\Users\\bara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bara\\RiderProjects\\simpleDuolingo\\simpleDuolingo\\obj\\",
+        "projectPath": "C:\\Users\\barbo\\OneDrive\\Plocha\\simpleDuolingo\\simpleDuolingo\\simpleDuolingo.csproj",
+        "packagesPath": "C:\\Users\\barbo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\barbo\\OneDrive\\Plocha\\simpleDuolingo\\simpleDuolingo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\barbo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -73,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\barbo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

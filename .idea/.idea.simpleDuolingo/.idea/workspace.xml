@@ -9,10 +9,31 @@
   <component name="ChangeListManager">
     <list default="true" id="640ef95d-6dcf-4278-95f3-199df98794e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/ref/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/ref/simpleDuolingo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/refint/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/refint/simpleDuolingo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/simpleDuolingo.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/simpleDuolingo.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/simpleDuolingo.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/simpleDuolingo.csproj.nuget.g.props" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +78,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,6 +118,8 @@
       <workItem from="1741383099440" duration="44000" />
       <workItem from="1741384236549" duration="28000" />
       <workItem from="1741384282580" duration="254000" />
+      <workItem from="1741456897837" duration="358000" />
+      <workItem from="1741457325091" duration="106000" />
     </task>
     <servers />
   </component>

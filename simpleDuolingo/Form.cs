@@ -1,4 +1,5 @@
 using simpleDuolingo.Views;
+using SimpleDuolingoWinForm;
 
 namespace simpleDuolingo;
 
@@ -11,6 +12,8 @@ namespace simpleDuolingo;
     private LoginView _loginView;
     
     private UserControl _currentView;
+    private DBDriver _dbDriver;
+    
 
     public enum ViewType
     {
@@ -25,12 +28,20 @@ namespace simpleDuolingo;
     {
         InitializeComponent();
         _loginView = new LoginView(this);
-        _navigationView = new NavigationView(this);
-        _userView = new UserView(this);
-        _registrationView = new RegistrationView(this);
-        _languageView = new LanguageView(this);
         
         SwitchView(ViewType.LoginView);
+    }
+
+    public void InitializeDatabase(string password)
+    {
+       _dbDriver = new DBDriver(password);
+        _loginView = new LoginView(this);
+        _navigationView = new NavigationView(this);
+        _userView = new UserView(this, _dbDriver);
+        _registrationView = new RegistrationView(this, _dbDriver);
+        _languageView = new LanguageView(this, _dbDriver);
+        
+        SwitchView(ViewType.NavigationView);
     }
 
     public void SwitchView(ViewType view)

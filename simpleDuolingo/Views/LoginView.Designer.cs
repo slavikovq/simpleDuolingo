@@ -66,9 +66,9 @@ partial class LoginView
         errorText.BackColor = System.Drawing.Color.Transparent;
         errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
-        errorText.Location = new System.Drawing.Point(258, 274);
+        errorText.Location = new System.Drawing.Point(289, 274);
         errorText.Name = "errorText";
-        errorText.Size = new System.Drawing.Size(249, 23);
+        errorText.Size = new System.Drawing.Size(195, 23);
         errorText.TabIndex = 2;
         errorText.Text = "\r\n";
         // 

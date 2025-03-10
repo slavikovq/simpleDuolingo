@@ -8,11 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640ef95d-6dcf-4278-95f3-199df98794e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.simpleDuolingo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/DBDriver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Models/Language.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Models/Language.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Models/Registration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Models/Registration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Form.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Form.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LanguageView.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LanguageView.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LanguageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LanguageView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/LoginView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/RegistrationView.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/RegistrationView.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/RegistrationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/RegistrationView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/UserView.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/UserView.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/Views/UserView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/Views/UserView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/bin/Debug/net8.0-windows/simpleDuolingo.dll" afterDir="false" />
@@ -26,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/Debug/net8.0-windows/simpleDuolingo.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/simpleDuolingo/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +51,10 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/slavikovq/simpleDuolingo.git&quot;,
-    &quot;accountId&quot;: &quot;74b7fffd-863f-4cf3-8e8c-eeff71a57e99&quot;
+    &quot;accountId&quot;: &quot;8c298eaf-3060-4207-b643-62f2b52564af&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -114,14 +118,29 @@
       <workItem from="1741456897837" duration="358000" />
       <workItem from="1741457325091" duration="106000" />
       <workItem from="1741541931256" duration="8849000" />
+      <workItem from="1741597421538" duration="1246000" />
+      <workItem from="1741609660918" duration="3788000" />
+      <workItem from="1741613563193" duration="3236000" />
     </task>
+    <task id="LOCAL-00001" summary="LanguageView Done">
+      <option name="closed" value="true" />
+      <created>1741598508099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741598508099</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="LanguageView Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="LanguageView Done" />
   </component>
 </project>

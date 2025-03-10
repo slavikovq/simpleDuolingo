@@ -31,35 +31,39 @@ partial class RegistrationView
     /// </summary>
     private void InitializeComponent()
     {
-        listView1 = new System.Windows.Forms.ListView();
+        userList = new System.Windows.Forms.ListView();
         columnHeader1 = new System.Windows.Forms.ColumnHeader();
         columnHeader2 = new System.Windows.Forms.ColumnHeader();
-        listView2 = new System.Windows.Forms.ListView();
+        languageList = new System.Windows.Forms.ListView();
         columnHeader5 = new System.Windows.Forms.ColumnHeader();
         columnHeader6 = new System.Windows.Forms.ColumnHeader();
-        listView3 = new System.Windows.Forms.ListView();
+        registrationList = new System.Windows.Forms.ListView();
         columnHeader10 = new System.Windows.Forms.ColumnHeader();
         columnHeader11 = new System.Windows.Forms.ColumnHeader();
         columnHeader12 = new System.Windows.Forms.ColumnHeader();
-        DeleteInput = new System.Windows.Forms.TextBox();
+        idInput = new System.Windows.Forms.TextBox();
         label1 = new System.Windows.Forms.Label();
-        button2 = new System.Windows.Forms.Button();
+        registerButton = new System.Windows.Forms.Button();
         button3 = new System.Windows.Forms.Button();
         errorText = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
+        deleteButton = new System.Windows.Forms.Button();
+        infoLabel1 = new System.Windows.Forms.Label();
+        infoLabel2 = new System.Windows.Forms.Label();
         SuspendLayout();
         // 
-        // listView1
+        // userList
         // 
-        listView1.BackColor = System.Drawing.Color.MistyRose;
-        listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2 });
-        listView1.Font = new System.Drawing.Font("Monocraft", 9F);
-        listView1.Location = new System.Drawing.Point(14, 43);
-        listView1.Name = "listView1";
-        listView1.Size = new System.Drawing.Size(250, 300);
-        listView1.TabIndex = 0;
-        listView1.UseCompatibleStateImageBehavior = false;
-        listView1.View = System.Windows.Forms.View.Details;
+        userList.BackColor = System.Drawing.Color.MistyRose;
+        userList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2 });
+        userList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+        userList.FullRowSelect = true;
+        userList.Location = new System.Drawing.Point(14, 43);
+        userList.Name = "userList";
+        userList.Size = new System.Drawing.Size(250, 300);
+        userList.TabIndex = 0;
+        userList.UseCompatibleStateImageBehavior = false;
+        userList.View = System.Windows.Forms.View.Details;
+        userList.SelectedIndexChanged += userList_SelectedIndexChanged;
         // 
         // columnHeader1
         // 
@@ -73,17 +77,19 @@ partial class RegistrationView
         columnHeader2.Text = "Username";
         columnHeader2.Width = 150;
         // 
-        // listView2
+        // languageList
         // 
-        listView2.BackColor = System.Drawing.Color.MistyRose;
-        listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader5, columnHeader6 });
-        listView2.Font = new System.Drawing.Font("Monocraft", 9F);
-        listView2.Location = new System.Drawing.Point(270, 43);
-        listView2.Name = "listView2";
-        listView2.Size = new System.Drawing.Size(250, 300);
-        listView2.TabIndex = 1;
-        listView2.UseCompatibleStateImageBehavior = false;
-        listView2.View = System.Windows.Forms.View.Details;
+        languageList.BackColor = System.Drawing.Color.MistyRose;
+        languageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader5, columnHeader6 });
+        languageList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+        languageList.FullRowSelect = true;
+        languageList.Location = new System.Drawing.Point(270, 43);
+        languageList.Name = "languageList";
+        languageList.Size = new System.Drawing.Size(250, 300);
+        languageList.TabIndex = 1;
+        languageList.UseCompatibleStateImageBehavior = false;
+        languageList.View = System.Windows.Forms.View.Details;
+        languageList.SelectedIndexChanged += languageList_SelectedIndexChanged;
         // 
         // columnHeader5
         // 
@@ -97,17 +103,17 @@ partial class RegistrationView
         columnHeader6.Text = "Name";
         columnHeader6.Width = 176;
         // 
-        // listView3
+        // registrationList
         // 
-        listView3.BackColor = System.Drawing.Color.MistyRose;
-        listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader10, columnHeader11, columnHeader12 });
-        listView3.Font = new System.Drawing.Font("Monocraft", 9F);
-        listView3.Location = new System.Drawing.Point(526, 43);
-        listView3.Name = "listView3";
-        listView3.Size = new System.Drawing.Size(250, 150);
-        listView3.TabIndex = 2;
-        listView3.UseCompatibleStateImageBehavior = false;
-        listView3.View = System.Windows.Forms.View.Details;
+        registrationList.BackColor = System.Drawing.Color.MistyRose;
+        registrationList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader10, columnHeader11, columnHeader12 });
+        registrationList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+        registrationList.Location = new System.Drawing.Point(526, 43);
+        registrationList.Name = "registrationList";
+        registrationList.Size = new System.Drawing.Size(250, 150);
+        registrationList.TabIndex = 2;
+        registrationList.UseCompatibleStateImageBehavior = false;
+        registrationList.View = System.Windows.Forms.View.Details;
         // 
         // columnHeader10
         // 
@@ -127,42 +133,45 @@ partial class RegistrationView
         columnHeader12.Text = "Language Id";
         columnHeader12.Width = 107;
         // 
-        // DeleteInput
+        // idInput
         // 
-        DeleteInput.BackColor = System.Drawing.Color.MistyRose;
-        DeleteInput.Font = new System.Drawing.Font("Monocraft", 10F);
-        DeleteInput.Location = new System.Drawing.Point(629, 221);
-        DeleteInput.Name = "DeleteInput";
-        DeleteInput.PlaceholderText = "Id";
-        DeleteInput.Size = new System.Drawing.Size(147, 22);
-        DeleteInput.TabIndex = 3;
-        DeleteInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        idInput.BackColor = System.Drawing.Color.MistyRose;
+        idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        idInput.Location = new System.Drawing.Point(585, 256);
+        idInput.Name = "idInput";
+        idInput.PlaceholderText = "Id";
+        idInput.Size = new System.Drawing.Size(147, 23);
+        idInput.TabIndex = 3;
+        idInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        idInput.KeyPress += idInput_KeyPress;
         // 
         // label1
         // 
         label1.BackColor = System.Drawing.Color.Transparent;
-        label1.Font = new System.Drawing.Font("Monocraft", 10F);
-        label1.Location = new System.Drawing.Point(558, 222);
+        label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        label1.Location = new System.Drawing.Point(585, 227);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(65, 23);
+        label1.Size = new System.Drawing.Size(147, 26);
         label1.TabIndex = 4;
-        label1.Text = "Delete";
+        label1.Text = "Delete registration";
+        label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
-        // button2
+        // registerButton
         // 
-        button2.BackColor = System.Drawing.Color.MistyRose;
-        button2.Font = new System.Drawing.Font("Monocraft", 10F);
-        button2.Location = new System.Drawing.Point(201, 365);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(150, 50);
-        button2.TabIndex = 6;
-        button2.Text = "Register";
-        button2.UseVisualStyleBackColor = false;
+        registerButton.BackColor = System.Drawing.Color.MistyRose;
+        registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        registerButton.Location = new System.Drawing.Point(201, 373);
+        registerButton.Name = "registerButton";
+        registerButton.Size = new System.Drawing.Size(150, 50);
+        registerButton.TabIndex = 6;
+        registerButton.Text = "Register";
+        registerButton.UseVisualStyleBackColor = false;
+        registerButton.Click += registerButton_Click;
         // 
         // button3
         // 
         button3.BackColor = System.Drawing.Color.MistyRose;
-        button3.Font = new System.Drawing.Font("Monocraft", 10F);
+        button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button3.Location = new System.Drawing.Point(14, 9);
         button3.Name = "button3";
         button3.Size = new System.Drawing.Size(130, 28);
@@ -173,44 +182,66 @@ partial class RegistrationView
         // 
         // errorText
         // 
-        errorText.Font = new System.Drawing.Font("Monocraft", 8F);
+        errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
         errorText.Location = new System.Drawing.Point(14, 392);
         errorText.Name = "errorText";
         errorText.Size = new System.Drawing.Size(150, 23);
         errorText.TabIndex = 9;
         // 
-        // button1
+        // deleteButton
         // 
-        button1.BackColor = System.Drawing.Color.MistyRose;
-        button1.Font = new System.Drawing.Font("Monocraft", 10F);
-        button1.Location = new System.Drawing.Point(629, 248);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(147, 30);
-        button1.TabIndex = 10;
-        button1.Text = "Delete Id";
-        button1.UseVisualStyleBackColor = false;
+        deleteButton.BackColor = System.Drawing.Color.MistyRose;
+        deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        deleteButton.Location = new System.Drawing.Point(585, 285);
+        deleteButton.Name = "deleteButton";
+        deleteButton.Size = new System.Drawing.Size(147, 30);
+        deleteButton.TabIndex = 10;
+        deleteButton.Text = "Delete Id";
+        deleteButton.UseVisualStyleBackColor = false;
+        deleteButton.Click += deleteButton_Click;
+        // 
+        // infoLabel1
+        // 
+        infoLabel1.BackColor = System.Drawing.Color.Transparent;
+        infoLabel1.Location = new System.Drawing.Point(14, 346);
+        infoLabel1.Name = "infoLabel1";
+        infoLabel1.Size = new System.Drawing.Size(250, 23);
+        infoLabel1.TabIndex = 11;
+        // 
+        // infoLabel2
+        // 
+        infoLabel2.BackColor = System.Drawing.Color.Transparent;
+        infoLabel2.Location = new System.Drawing.Point(270, 346);
+        infoLabel2.Name = "infoLabel2";
+        infoLabel2.Size = new System.Drawing.Size(250, 23);
+        infoLabel2.TabIndex = 12;
         // 
         // RegistrationView
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.RosyBrown;
-        Controls.Add(button1);
+        Controls.Add(label1);
+        Controls.Add(infoLabel2);
+        Controls.Add(infoLabel1);
+        Controls.Add(deleteButton);
         Controls.Add(errorText);
         Controls.Add(button3);
-        Controls.Add(button2);
-        Controls.Add(label1);
-        Controls.Add(DeleteInput);
-        Controls.Add(listView3);
-        Controls.Add(listView2);
-        Controls.Add(listView1);
+        Controls.Add(registerButton);
+        Controls.Add(idInput);
+        Controls.Add(registrationList);
+        Controls.Add(languageList);
+        Controls.Add(userList);
         Size = new System.Drawing.Size(799, 450);
         ResumeLayout(false);
         PerformLayout();
     }
 
-    private System.Windows.Forms.TextBox DeleteInput;
+    private System.Windows.Forms.Label infoLabel1;
+    private System.Windows.Forms.Label infoLabel2;
+
+    private System.Windows.Forms.TextBox idInput;
 
     private System.Windows.Forms.Label errorText;
 
@@ -226,17 +257,17 @@ partial class RegistrationView
     private System.Windows.Forms.ColumnHeader columnHeader1;
     private System.Windows.Forms.ColumnHeader columnHeader2;
 
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button registerButton;
 
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button deleteButton;
 
     private System.Windows.Forms.Label label1;
 
-    private System.Windows.Forms.ListView listView2;
-    private System.Windows.Forms.ListView listView3;
+    private System.Windows.Forms.ListView languageList;
+    private System.Windows.Forms.ListView registrationList;
     private System.Windows.Forms.Button DeleteIdButton;
 
-    private System.Windows.Forms.ListView listView1;
+    private System.Windows.Forms.ListView userList;
 
     #endregion
 }

@@ -1,13 +1,12 @@
 using simpleDuolingo.Models;
-using SimpleDuolingoWinForm;
 
 namespace simpleDuolingo.Views;
 
 public partial class LanguageView : UserControl
 {
     private readonly Form _parentForm;
-    private readonly DBDriver _DbDriver;
-    public LanguageView(Form parentForm, DBDriver dbDriver)
+    private readonly DbDriver _DbDriver;
+    public LanguageView(Form parentForm, DbDriver dbDriver)
     {
         _parentForm = parentForm;
         _DbDriver = dbDriver;
@@ -49,6 +48,7 @@ public partial class LanguageView : UserControl
             }
             nameInput.Text = "";
             difficultyInput.Text = "";
+            _parentForm.RegistrationView.RefreshAllLists();
             loadListData();
         }
     }
@@ -118,6 +118,7 @@ public partial class LanguageView : UserControl
             {
                 errorText.Text = "";
             }
+            _parentForm.RegistrationView.RefreshAllLists();
             loadListData();
             idInput.Text = "";
         }

@@ -142,11 +142,11 @@ partial class UserView
         // 
         label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         label2.ForeColor = System.Drawing.Color.Black;
-        label2.Location = new System.Drawing.Point(77, 233);
+        label2.Location = new System.Drawing.Point(59, 234);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(65, 23);
+        label2.Size = new System.Drawing.Size(85, 23);
         label2.TabIndex = 11;
-        label2.Text = "Delete";
+        label2.Text = "Delete user";
         // 
         // button3
         // 

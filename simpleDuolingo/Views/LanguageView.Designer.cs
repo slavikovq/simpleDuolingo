@@ -46,25 +46,26 @@ partial class LanguageView
         nameInput = new System.Windows.Forms.TextBox();
         idInput = new System.Windows.Forms.TextBox();
         difficultyInput = new System.Windows.Forms.TextBox();
+        label3 = new System.Windows.Forms.Label();
         SuspendLayout();
         // 
         // label1
         // 
         label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-        label1.Location = new System.Drawing.Point(64, 126);
+        label1.Location = new System.Drawing.Point(45, 130);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(53, 23);
+        label1.Size = new System.Drawing.Size(72, 23);
         label1.TabIndex = 0;
-        label1.Text = "Name";
+        label1.Text = "Language";
         // 
         // label2
         // 
         label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-        label2.Location = new System.Drawing.Point(53, 228);
+        label2.Location = new System.Drawing.Point(3, 245);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(64, 23);
+        label2.Size = new System.Drawing.Size(114, 23);
         label2.TabIndex = 1;
-        label2.Text = "Delete";
+        label2.Text = "Delete language";
         // 
         // languageList
         // 
@@ -123,7 +124,7 @@ partial class LanguageView
         // 
         errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
-        errorText.Location = new System.Drawing.Point(127, 394);
+        errorText.Location = new System.Drawing.Point(114, 204);
         errorText.Name = "errorText";
         errorText.Size = new System.Drawing.Size(150, 23);
         errorText.TabIndex = 8;
@@ -144,7 +145,7 @@ partial class LanguageView
         // 
         button2.BackColor = System.Drawing.Color.MistyRose;
         button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-        button2.Location = new System.Drawing.Point(123, 257);
+        button2.Location = new System.Drawing.Point(123, 270);
         button2.Name = "button2";
         button2.Size = new System.Drawing.Size(130, 28);
         button2.TabIndex = 11;
@@ -166,10 +167,12 @@ partial class LanguageView
         // 
         idInput.BackColor = System.Drawing.Color.MistyRose;
         idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-        idInput.Location = new System.Drawing.Point(123, 229);
+        idInput.Location = new System.Drawing.Point(123, 242);
         idInput.Name = "idInput";
+        idInput.PlaceholderText = "Id";
         idInput.Size = new System.Drawing.Size(130, 23);
         idInput.TabIndex = 13;
+        idInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
         idInput.KeyPress += idInput_KeyPress;
         // 
         // difficultyInput
@@ -178,15 +181,26 @@ partial class LanguageView
         difficultyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         difficultyInput.Location = new System.Drawing.Point(123, 98);
         difficultyInput.Name = "difficultyInput";
-        difficultyInput.PlaceholderText = "Enter difficulty level";
+        difficultyInput.PlaceholderText = "Difficulty level";
         difficultyInput.Size = new System.Drawing.Size(130, 23);
         difficultyInput.TabIndex = 14;
+        difficultyInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        // 
+        // label3
+        // 
+        label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        label3.Location = new System.Drawing.Point(53, 98);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(64, 23);
+        label3.TabIndex = 15;
+        label3.Text = "Difficulty";
         // 
         // LanguageView
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.RosyBrown;
+        Controls.Add(label3);
         Controls.Add(difficultyInput);
         Controls.Add(idInput);
         Controls.Add(nameInput);
@@ -201,6 +215,8 @@ partial class LanguageView
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Label label3;
 
     private System.Windows.Forms.TextBox difficultyInput;
 

@@ -1,12 +1,11 @@
 using MySqlConnector;
-using SimpleDuolingoWinForm;
 
 namespace simpleDuolingo.Views;
 
 public partial class LoginView : UserControl
 {
     private readonly Form _parentForm;
-    private DBDriver? _dbDriver;
+    private DbDriver? _dbDriver;
     
     public LoginView(Form parentForm)
     {
@@ -27,7 +26,7 @@ public partial class LoginView : UserControl
 
         try
         {
-            _dbDriver = new DBDriver(password);
+            _dbDriver = new DbDriver(password);
             using (MySqlConnection conn = _dbDriver.GetConnection())
             {
                 conn.Open();

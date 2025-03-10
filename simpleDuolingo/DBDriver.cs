@@ -1,31 +1,29 @@
-using System.Security.Cryptography;
-using Microsoft.VisualBasic.ApplicationServices;
 using MySqlConnector;
 using simpleDuolingo.Models;
 using User = simpleDuolingo.Models.User;
 
-namespace SimpleDuolingoWinForm;
+namespace simpleDuolingo;
 
-public class DBDriver
+public class DbDriver
 {
     public string ServerDomain = "localhost";
     public string Username = "root";
     public string Password = "";
     public string Database = "student_barbora.slavikova_simpleduolingo";
     
-    public string connectionString =>
+    public string ConnectionString =>
         $"Server={ServerDomain};Database={Database};User={Username};Password={Password}; Port=3306";
 
     public Exception? ThrownException;
 
-    public DBDriver(string password)
+    public DbDriver(string password)
     {
         Password = password;
     }
 
     public MySqlConnection GetConnection()
     {
-        return new MySqlConnection(connectionString);
+        return new MySqlConnection(ConnectionString);
     }
     
     // Users
@@ -110,7 +108,8 @@ public class DBDriver
     
     //languages
     
-      public List<Language> GetAllLanguages()
+      
+     public List<Language> GetAllLanguages()
     {
         List<Language> languages = new List<Language>();
         
@@ -177,6 +176,8 @@ public class DBDriver
             errorText.Text = $"Error: {e.Message}";
         }
     }
+    
+
 
     public bool LanguageExists(int id)
     {
@@ -186,6 +187,99 @@ public class DBDriver
             string command = "SELECT COUNT(*) FROM languages WHERE id = @id";
             var cmd = new MySqlCommand(command, conn);
             cmd.Parameters.AddWithValue("@id", id);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+    }
+    
+    //registration
+    
+          public List<Registration> GetAllRegistrations()
+    {
+        List<Registration> registrations = new List<Registration>();
+        
+        using (MySqlConnection connection = GetConnection())
+        {
+            connection.Open();
+            
+            string command = "SELECT * FROM user_language_registration";
+            var cmd = new MySqlCommand(command, connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                Registration registration = new Registration(
+                    reader.GetInt32(0),
+                    reader.GetInt32(1),
+                    reader.GetInt32(2)
+                );
+                
+                registrations.Add(registration);
+            }
+        }
+        return registrations;
+    }
+
+    public void CreateRegistration(int userId, Label errorText, int languageId)
+    {
+        try
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open(); 
+                string command = "INSERT INTO user_language_registration (user_id, language_id) VALUES (@user_id, @language_id)";
+                var cmd = new MySqlCommand(command, conn); 
+                cmd.Parameters.AddWithValue("@user_id", userId);
+                cmd.Parameters.AddWithValue("@language_id", languageId);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        catch (MySqlException e)
+        {
+            errorText.Text = $"Error: {e.Message}";
+        }
+    }
+
+    public void DeleteRegistration(int id, Label errorText)
+    {
+        try
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string command = "DELETE FROM user_language_registration WHERE id = @id";
+                var cmd = new MySqlCommand(command, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        catch (MySqlException e)
+        {
+            errorText.Text = $"Error: {e.Message}";
+        }
+    }
+    public bool RegistrationExists(int id)
+    {
+        using (MySqlConnection conn = GetConnection())
+        {
+            conn.Open();
+            string command = "SELECT COUNT(*) FROM user_language_registration WHERE id = @id";
+            var cmd = new MySqlCommand(command, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+    }
+    
+    public bool ExistingRegistration(int userId, int languageId)
+    {
+        using (MySqlConnection conn = GetConnection())
+        {
+            conn.Open();
+            string command = "SELECT COUNT(*) FROM user_language_registration WHERE user_id = @userId AND language_id = @languageId";
+            var cmd = new MySqlCommand(command, conn);
+            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@languageId", languageId);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
             return count > 0;
         }

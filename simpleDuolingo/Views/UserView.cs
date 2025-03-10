@@ -1,16 +1,15 @@
 
 using MySqlConnector;
 using simpleDuolingo.Models;
-using SimpleDuolingoWinForm;
 
 namespace simpleDuolingo.Views;
 
 public partial class UserView : UserControl
 {
     private readonly Form _parentForm;
-    private readonly DBDriver _DbDriver;
+    private readonly DbDriver _DbDriver;
 
-    public UserView(Form parentForm, DBDriver dbDriver)
+    public UserView(Form parentForm, DbDriver dbDriver)
     {
         _parentForm = parentForm;
         _DbDriver = dbDriver;
@@ -38,6 +37,7 @@ public partial class UserView : UserControl
         {
             _DbDriver.CreateUser(name, errorText);
             nameInput.Text = "";
+            _parentForm.RegistrationView.RefreshAllLists();
             loadListData();
         }
     }
@@ -110,6 +110,7 @@ public partial class UserView : UserControl
             {
                 errorText.Text = "";
             }
+            _parentForm.RegistrationView.RefreshAllLists();
             loadListData();
             idInput.Text = "";
         }

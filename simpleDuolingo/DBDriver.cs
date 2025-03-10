@@ -33,23 +33,27 @@ public class DBDriver
     public List<User> GetAllUsers()
     {
         List<User> users = new List<User>();
-
-        string command = "SELECT * FROM users";
-        using (MySqlCommand cmd = new MySqlCommand(command, GetConnection()))
-        using (MySqlDataReader reader = cmd.ExecuteReader())
+        
+        using (MySqlConnection connection = GetConnection())
         {
+            connection.Open();
+            
+            string command = "SELECT * FROM users";
+            var cmd = new MySqlCommand(command, connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            
             while (reader.Read())
             {
                 User user = new User(
-                reader.GetInt32(0),
-                reader.GetString(1),
-                reader.GetDateTime(2),
-                reader.GetDateTime(3)
-                    );
+                    reader.GetInt32(0),
+                    reader.GetString(1),
+                    reader.GetDateTime(2),
+                    reader.GetDateTime(3)
+                );
+                
                 users.Add(user);
             }
         }
-
         return users;
     }
 
@@ -76,14 +80,114 @@ public class DBDriver
     {
         try
         {
-            string command = "DELETE FROM users WHERE id = @id";
-            var cmd = new MySqlCommand(command, GetConnection());
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string command = "DELETE FROM users WHERE id = @id";
+                var cmd = new MySqlCommand(command, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
         }
         catch (MySqlException e)
         {
             errorText.Text = $"Error: {e.Message}";
+        }
+    }
+
+    public bool UserExists(int id)
+    {
+        using (MySqlConnection conn = GetConnection())
+        {
+            conn.Open();
+            string command = "SELECT COUNT(*) FROM users WHERE id = @id";
+            var cmd = new MySqlCommand(command, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+    }
+    
+    //languages
+    
+      public List<Language> GetAllLanguages()
+    {
+        List<Language> languages = new List<Language>();
+        
+        using (MySqlConnection connection = GetConnection())
+        {
+            connection.Open();
+            
+            string command = "SELECT * FROM languages";
+            var cmd = new MySqlCommand(command, connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                Language language = new Language(
+                    reader.GetInt32(0),
+                    reader.GetString(1),
+                    reader.GetInt32(2),
+                    reader.GetDateTime(3),
+                    reader.GetDateTime(4)
+                    
+                );
+                
+                languages.Add(language);
+            }
+        }
+        return languages;
+    }
+
+    public void CreateLanguage(string name, Label errorText, int difficulty)
+    {
+        try
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open(); 
+                string command = "INSERT INTO languages (name, difficulty) VALUES (@name, @difficulty)";
+                var cmd = new MySqlCommand(command, conn); 
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@difficulty", difficulty);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        catch (MySqlException e)
+        {
+            errorText.Text = $"Error: {e.Message}";
+        }
+    }
+
+    public void DeleteLanguage(int id, Label errorText)
+    {
+        try
+        {
+            using (MySqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string command = "DELETE FROM languages WHERE id = @id";
+                var cmd = new MySqlCommand(command, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        catch (MySqlException e)
+        {
+            errorText.Text = $"Error: {e.Message}";
+        }
+    }
+
+    public bool LanguageExists(int id)
+    {
+        using (MySqlConnection conn = GetConnection())
+        {
+            conn.Open();
+            string command = "SELECT COUNT(*) FROM languages WHERE id = @id";
+            var cmd = new MySqlCommand(command, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
         }
     }
 }

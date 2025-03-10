@@ -33,7 +33,7 @@ partial class LanguageView
     {
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
-        listView1 = new System.Windows.Forms.ListView();
+        languageList = new System.Windows.Forms.ListView();
         columnHeader1 = new System.Windows.Forms.ColumnHeader();
         columnHeader2 = new System.Windows.Forms.ColumnHeader();
         columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -41,15 +41,16 @@ partial class LanguageView
         columnHeader5 = new System.Windows.Forms.ColumnHeader();
         button3 = new System.Windows.Forms.Button();
         errorText = new System.Windows.Forms.Label();
-        button1 = new System.Windows.Forms.Button();
+        createInput = new System.Windows.Forms.Button();
         button2 = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
-        textBox2 = new System.Windows.Forms.TextBox();
+        nameInput = new System.Windows.Forms.TextBox();
+        idInput = new System.Windows.Forms.TextBox();
+        difficultyInput = new System.Windows.Forms.TextBox();
         SuspendLayout();
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Monocraft", 10F);
+        label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         label1.Location = new System.Drawing.Point(64, 126);
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(53, 23);
@@ -58,24 +59,24 @@ partial class LanguageView
         // 
         // label2
         // 
-        label2.Font = new System.Drawing.Font("Monocraft", 10F);
+        label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         label2.Location = new System.Drawing.Point(53, 228);
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(64, 23);
         label2.TabIndex = 1;
         label2.Text = "Delete";
         // 
-        // listView1
+        // languageList
         // 
-        listView1.BackColor = System.Drawing.Color.MistyRose;
-        listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
-        listView1.Font = new System.Drawing.Font("Monocraft", 8F);
-        listView1.Location = new System.Drawing.Point(279, 22);
-        listView1.Name = "listView1";
-        listView1.Size = new System.Drawing.Size(497, 400);
-        listView1.TabIndex = 6;
-        listView1.UseCompatibleStateImageBehavior = false;
-        listView1.View = System.Windows.Forms.View.Details;
+        languageList.BackColor = System.Drawing.Color.MistyRose;
+        languageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+        languageList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+        languageList.Location = new System.Drawing.Point(279, 22);
+        languageList.Name = "languageList";
+        languageList.Size = new System.Drawing.Size(497, 400);
+        languageList.TabIndex = 6;
+        languageList.UseCompatibleStateImageBehavior = false;
+        languageList.View = System.Windows.Forms.View.Details;
         // 
         // columnHeader1
         // 
@@ -109,7 +110,7 @@ partial class LanguageView
         // button3
         // 
         button3.BackColor = System.Drawing.Color.MistyRose;
-        button3.Font = new System.Drawing.Font("Monocraft", 10F);
+        button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button3.Location = new System.Drawing.Point(12, 12);
         button3.Name = "button3";
         button3.Size = new System.Drawing.Size(130, 28);
@@ -120,65 +121,80 @@ partial class LanguageView
         // 
         // errorText
         // 
-        errorText.Font = new System.Drawing.Font("Monocraft", 8F);
+        errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
         errorText.Location = new System.Drawing.Point(127, 394);
         errorText.Name = "errorText";
         errorText.Size = new System.Drawing.Size(150, 23);
         errorText.TabIndex = 8;
         // 
-        // button1
+        // createInput
         // 
-        button1.BackColor = System.Drawing.Color.MistyRose;
-        button1.Font = new System.Drawing.Font("Monocraft", 10F);
-        button1.Location = new System.Drawing.Point(123, 155);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(130, 28);
-        button1.TabIndex = 10;
-        button1.Text = "Back";
-        button1.UseVisualStyleBackColor = false;
+        createInput.BackColor = System.Drawing.Color.MistyRose;
+        createInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        createInput.Location = new System.Drawing.Point(123, 155);
+        createInput.Name = "createInput";
+        createInput.Size = new System.Drawing.Size(130, 28);
+        createInput.TabIndex = 10;
+        createInput.Text = "Create";
+        createInput.UseVisualStyleBackColor = false;
+        createInput.Click += createInput_Click;
         // 
         // button2
         // 
         button2.BackColor = System.Drawing.Color.MistyRose;
-        button2.Font = new System.Drawing.Font("Monocraft", 10F);
+        button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
         button2.Location = new System.Drawing.Point(123, 257);
         button2.Name = "button2";
         button2.Size = new System.Drawing.Size(130, 28);
         button2.TabIndex = 11;
-        button2.Text = "Back";
+        button2.Text = "Delete";
         button2.UseVisualStyleBackColor = false;
+        button2.Click += button2_Click;
         // 
-        // textBox1
+        // nameInput
         // 
-        textBox1.BackColor = System.Drawing.Color.MistyRose;
-        textBox1.Font = new System.Drawing.Font("Monocraft", 10F);
-        textBox1.Location = new System.Drawing.Point(123, 127);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(130, 22);
-        textBox1.TabIndex = 12;
+        nameInput.BackColor = System.Drawing.Color.MistyRose;
+        nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        nameInput.Location = new System.Drawing.Point(123, 127);
+        nameInput.Name = "nameInput";
+        nameInput.Size = new System.Drawing.Size(130, 23);
+        nameInput.TabIndex = 12;
+        nameInput.KeyPress += nameInput_KeyPress;
         // 
-        // textBox2
+        // idInput
         // 
-        textBox2.BackColor = System.Drawing.Color.MistyRose;
-        textBox2.Font = new System.Drawing.Font("Monocraft", 10F);
-        textBox2.Location = new System.Drawing.Point(123, 229);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new System.Drawing.Size(130, 22);
-        textBox2.TabIndex = 13;
+        idInput.BackColor = System.Drawing.Color.MistyRose;
+        idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        idInput.Location = new System.Drawing.Point(123, 229);
+        idInput.Name = "idInput";
+        idInput.Size = new System.Drawing.Size(130, 23);
+        idInput.TabIndex = 13;
+        idInput.KeyPress += idInput_KeyPress;
+        // 
+        // difficultyInput
+        // 
+        difficultyInput.BackColor = System.Drawing.Color.MistyRose;
+        difficultyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        difficultyInput.Location = new System.Drawing.Point(123, 98);
+        difficultyInput.Name = "difficultyInput";
+        difficultyInput.PlaceholderText = "Enter difficulty level";
+        difficultyInput.Size = new System.Drawing.Size(130, 23);
+        difficultyInput.TabIndex = 14;
         // 
         // LanguageView
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.RosyBrown;
-        Controls.Add(textBox2);
-        Controls.Add(textBox1);
+        Controls.Add(difficultyInput);
+        Controls.Add(idInput);
+        Controls.Add(nameInput);
         Controls.Add(button2);
-        Controls.Add(button1);
+        Controls.Add(createInput);
         Controls.Add(errorText);
         Controls.Add(button3);
-        Controls.Add(listView1);
+        Controls.Add(languageList);
         Controls.Add(label2);
         Controls.Add(label1);
         Size = new System.Drawing.Size(799, 450);
@@ -186,7 +202,9 @@ partial class LanguageView
         PerformLayout();
     }
 
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox difficultyInput;
+
+    private System.Windows.Forms.TextBox idInput;
 
     private System.Windows.Forms.Label errorText;
 
@@ -198,13 +216,13 @@ partial class LanguageView
     private System.Windows.Forms.ColumnHeader columnHeader4;
     private System.Windows.Forms.ColumnHeader columnHeader5;
 
-    private System.Windows.Forms.ListView listView1;
+    private System.Windows.Forms.ListView languageList;
 
     private System.Windows.Forms.TextBox Delete;
     private System.Windows.Forms.Button button2;
 
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.TextBox nameInput;
+    private System.Windows.Forms.Button createInput;
 
     private System.Windows.Forms.Label label2;
 

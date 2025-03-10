@@ -19,11 +19,11 @@ public partial class LoginView : UserControl
         errorText.Text = "";
         string password = PasswordLogin.Text;
         
-        //if(string.IsNullOrEmpty(password))
-        //{
-        //    errorText.Text = "Password not entered";
-        //    return;
-        //}
+        if(string.IsNullOrEmpty(password))
+        {
+            errorText.Text = "Password not entered";
+            return;
+        }
 
         try
         {

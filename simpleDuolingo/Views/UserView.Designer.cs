@@ -31,7 +31,7 @@ partial class UserView
     /// </summary>
     private void InitializeComponent()
     {
-        listView1 = new System.Windows.Forms.ListView();
+        userList = new System.Windows.Forms.ListView();
         columnHeader1 = new System.Windows.Forms.ColumnHeader();
         columnHeader2 = new System.Windows.Forms.ColumnHeader();
         columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -39,24 +39,24 @@ partial class UserView
         label1 = new System.Windows.Forms.Label();
         button2 = new System.Windows.Forms.Button();
         nameInput = new System.Windows.Forms.TextBox();
-        textBox2 = new System.Windows.Forms.TextBox();
+        idInput = new System.Windows.Forms.TextBox();
         button1 = new System.Windows.Forms.Button();
         label2 = new System.Windows.Forms.Label();
         button3 = new System.Windows.Forms.Button();
         errorText = new System.Windows.Forms.Label();
         SuspendLayout();
         // 
-        // listView1
+        // userList
         // 
-        listView1.BackColor = System.Drawing.Color.MistyRose;
-        listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-        listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-        listView1.Location = new System.Drawing.Point(304, 24);
-        listView1.Name = "listView1";
-        listView1.Size = new System.Drawing.Size(472, 400);
-        listView1.TabIndex = 3;
-        listView1.UseCompatibleStateImageBehavior = false;
-        listView1.View = System.Windows.Forms.View.Details;
+        userList.BackColor = System.Drawing.Color.MistyRose;
+        userList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+        userList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+        userList.Location = new System.Drawing.Point(304, 24);
+        userList.Name = "userList";
+        userList.Size = new System.Drawing.Size(472, 400);
+        userList.TabIndex = 3;
+        userList.UseCompatibleStateImageBehavior = false;
+        userList.View = System.Windows.Forms.View.Details;
         // 
         // columnHeader1
         // 
@@ -114,16 +114,17 @@ partial class UserView
         nameInput.TabIndex = 8;
         nameInput.KeyPress += nameInput_KeyPress;
         // 
-        // textBox2
+        // idInput
         // 
-        textBox2.BackColor = System.Drawing.Color.MistyRose;
-        textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-        textBox2.Location = new System.Drawing.Point(148, 234);
-        textBox2.Name = "textBox2";
-        textBox2.PlaceholderText = "Id";
-        textBox2.Size = new System.Drawing.Size(150, 23);
-        textBox2.TabIndex = 9;
-        textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        idInput.BackColor = System.Drawing.Color.MistyRose;
+        idInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+        idInput.Location = new System.Drawing.Point(148, 234);
+        idInput.Name = "idInput";
+        idInput.PlaceholderText = "Id";
+        idInput.Size = new System.Drawing.Size(150, 23);
+        idInput.TabIndex = 9;
+        idInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+        idInput.KeyPress += idInput_KeyPress;
         // 
         // button1
         // 
@@ -133,8 +134,9 @@ partial class UserView
         button1.Name = "button1";
         button1.Size = new System.Drawing.Size(150, 28);
         button1.TabIndex = 10;
-        button1.Text = "Create";
+        button1.Text = "Delete";
         button1.UseVisualStyleBackColor = false;
+        button1.Click += button1_Click;
         // 
         // label2
         // 
@@ -162,7 +164,7 @@ partial class UserView
         // 
         errorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
         errorText.ForeColor = System.Drawing.Color.Maroon;
-        errorText.Location = new System.Drawing.Point(148, 198);
+        errorText.Location = new System.Drawing.Point(148, 199);
         errorText.Name = "errorText";
         errorText.Size = new System.Drawing.Size(150, 23);
         errorText.TabIndex = 13;
@@ -176,11 +178,11 @@ partial class UserView
         Controls.Add(button3);
         Controls.Add(label2);
         Controls.Add(button1);
-        Controls.Add(textBox2);
+        Controls.Add(idInput);
         Controls.Add(nameInput);
         Controls.Add(button2);
         Controls.Add(label1);
-        Controls.Add(listView1);
+        Controls.Add(userList);
         Size = new System.Drawing.Size(799, 450);
         ResumeLayout(false);
         PerformLayout();
@@ -195,7 +197,7 @@ partial class UserView
     private System.Windows.Forms.ColumnHeader columnHeader3;
     private System.Windows.Forms.ColumnHeader columnHeader4;
 
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox idInput;
     private System.Windows.Forms.Label label2;
 
     private System.Windows.Forms.TextBox nameInput;
@@ -204,7 +206,7 @@ partial class UserView
     private System.Windows.Forms.Button button2;
 
     private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.ListView listView1;
+    private System.Windows.Forms.ListView userList;
 
     #endregion
 }
